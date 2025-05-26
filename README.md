@@ -57,16 +57,32 @@ Represents a vehicle:
 ## ✅ Sample Use
 
 ```python
-# Setup
-v1 = Vehicle("AB-123-CD", "Toyota", "SUV")
-cust = Customer("Alice", 30, "C001")
-emp = Employee("Tom", 45, "E001", "Downtown")
+# Create a vehicules
+vh1 = Vehicle("A018973","Peugeout",'Car')
+vh2 = Vehicle("A018972","Renault",'trak')
+vh3 = Vehicle("A018976","Fiat",'Car')
+vh4 = Vehicle("A018979","Opel",'Car')
 
-# Assign vehicle
-emp.assign_vehicle(v1, cust)
+# Create a Customers
 
-# View rentals
-cust.view_rentals()
 
-# Return vehicle
-cust.return_vehicle(v1)
+cst1 = Customer('Seif',34,"A018")
+cst2 = Customer('Ali',30,"A019")
+cst3 = Customer('Jaen',32,"A011")
+
+#Effect Custumers to there Vehicules
+
+Emp = Employee('Alex', 22,"A0190","France")
+
+Emp.assign_vehicle(vh1,cst2)
+Emp.assign_vehicle(vh2,cst2)
+Emp.assign_vehicle(vh3,cst2)
+Emp.assign_vehicle(vh3,cst1)
+
+# Show a results
+
+vh1.show_status()
+cst2.view_rentals()
+cst1.view_rentals()
+cst3.view_rentals()
+
